@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>LOGIN</title>
+</head>
+
+<body>
+
+  <!--EMPEZAMOS CREANDO UN NAVBAR-->
+  <!--Empezamos agregando un logo-->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://www.payvalidda.net/_nuxt/img/pv_logo_negro.c2518b8.png" alt="" width="300" height="65">
+      </a>
+  <!--vamos creando cada uno de los respectivos botones para que nos redireccione a una otro html-->
+      <ul class="nav justify-content-end">
+        <form action="{{url_for('inicio')}}" method="post" class="card-body">
+          <button type="submit" class="btn btn-text-info ">Login</button>
+        </form>
+        <form action="{{url_for('registro')}}" method="post" class="card-body">
+          <button type="submit" class="btn btn-info mb-2 rounded-pill">Registrarse</button>
+        </form>
+      </ul>
+    </div>
+  </nav>
+  <!--EMPEZAMOS CON EL login-->
+  <br>
+    <section id="mas" class="bg-white responsive">
+    <div class="container">
+      <div class="row space-top-10 space-10">
+        <div class="col-lg-10 col-lg-offset-1">
+          <div class="row space-top-10">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12 text-center">
+              <h3 class="heading w600 space-top-1">Compra de forma fácil y segura</h3>
+              <p>Payvalida ahora es Bevalida</p>
+              <ul class="list-unstyled">
+                <li>Ingresa a tu cuenta y compra en comercios con mayor seguridad</li>
+                <li>Paga con un clic registrando tus tarjetas</li>
+                <li>Descarga nuestra APP para ANDROID y iPHONE, consulta tus compras y mucho más.</li>
+              </ul>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 well">
+              <form id="loginform" class="form bv-form" role="form" action="/menu" method="post"
+                novalidate="novalidate"><button type="submit" class="bv-hidden-submit border border-3"
+                  style="display: none; width: 0px; height: 0px;"></button>
+
+                <div class="form-group has-feedback">
+                  <label for="codigoPaisRegistro" class="control-label">PAÍS:</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"></span> <select
+                      class="form-control" id="codigoPaisRegistro" name="codigoPaisRegistro" required="required"
+                      data-bv-field="codigoPaisRegistro">
+                      <option value=".">POR FAVOR SELECCIONE UNA
+                        OPCIÓN</option>
+                      <option value="343">COLOMBIA</option>
+                      <option value="314">COSTA RICA</option>
+                      <option value="349">COSTA RICA (USD)</option>
+                      <option value="345">ECUADOR</option>
+                      <option value="347">GUATEMALA</option>
+                      <option value="348">PERU</option>
+                    </select>
+                  </div>
+                </div>
+                <br>
+                <div class="form-group has-feedback has-success">
+                  <label for="email">CORREO ELECTRÓNICO: </label>
+                  <div class="input-group">
+                    <span class="input-group-addon"></span> <input
+                      type="email" class="form-control" id="email" name="email"
+                      placeholder="Digite su correo electrónico" autocomplete="off" data-bv-field="email">
+                  </div>
+                <br>
+                <div class="form-group has-feedback has-success">
+                  <label for="password">CONTRASEÑA: </label>
+                  <div class="input-group">
+                    <span class="input-group-addon"></span> <input
+                      type="password" class="form-control" id="email" name="password" placeholder="Digite su contraseña"
+                      autocomplete="off" data-bv-field="password">
+                  </div>
+                </div>
+                <br>
+                <div class="form-group">
+                  <small><a href="#">¿DESBLOQUEAR
+                      CUENTA O RECUPERAR CONTRASEÑA?</a></small>
+                </div><br>
+                <div class="form-group">
+                  <form action="{{url_for('menu')}}" method="get" class="card-body">
+                    <button type="submit" class="btn btn-info mb-2 rounded-pill">Ingresar</button>
+                  </form>
+                </div>
+              </form>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!--Ahora vamos a crear el footer-->
+  <br>
+  <footer class="footer">
+    <!--Comenzamos creando un contenedor donde organizaremos por columnas los datos-->
+    <div class="container">
+      <div class="row space-top-15 space-1">
+        <div class="col-lg-12">
+          <div class="col-xs-12 center">
+            <!--Ponemos un titulo de referencia-->
+          <h3 align ="center">Contáctanos</h3>
+          <br>
+          </div>  
+          <!--Empezamos creando las filas-->
+    <div class="row">
+            <div class="col-xs-10 col-sm-4 col-md-4 col-lg-4 space-5">
+              <ul class="list-unstyled">
+               <li class="w600">Colombia <img class="lazy" src="https://app-prod.payvalida.com/resources/img/co.png"></li>
+                <li class="light-gray">(4) 444 99 69 </li>
+                <li class="light-gray">  +57 311 708 3644 <img class="lazy" src="https://app-prod.payvalida.com/resources/img/wp.png"></li>
+                <li class="light-gray"> info.co@payvalida.com</li>
+             </ul>
+            </div>
+
+             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+        <ul class="list-unstyled">
+               <li class="w600">Costa Rica <img class="lazy" src="https://app-prod.payvalida.com/resources/img/cr.png"></li>
+               <li class="light-gray"> +506 6077-0108<img class="lazy" src="https://app-prod.payvalida.com/resources/img/wp.png"></li>
+                <li class="light-gray">  info.cr@payvalida.com</li>
+             </ul>
+            </div>
+            
+             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+        <ul class="list-unstyled">
+               <li class="w600">Perú <img class="lazy" src="https://app-prod.payvalida.com/resources/img/pe.png"></li>
+                <li class="light-gray">  +51 920 004 715 <img class="lazy" src="https://app-prod.payvalida.com/resources/img/wp.png"></li>         
+                <li class="light-gray">  info.pe@payvalida.com</li>
+             </ul>
+            </div>
+  </div>
+<!--Agreamos otra fila-->
+  <div class="row">     
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+        <ul class="list-unstyled">
+               <li class="w600">Ecuador <img class="lazy" src="https://app-prod.payvalida.com/resources/img/ec.png"></li>
+                <li class="light-gray"> +593 93 993 07 61 <img class="lazy" src="https://app-prod.payvalida.com/resources/img/wp.png"></li>            
+                <li class="light-gray">   info.ec@payvalida.com</li>
+             </ul>      
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 space-5">
+        <ul class="list-unstyled">
+          <li class="w600">Guatemala <img class="lazy" src="https://app-prod.payvalida.com/resources/img/gtq.png"></li>
+           <li class="light-gray"> +502 3085-3453 <img class="lazy" src="https://app-prod.payvalida.com/resources/img/wp.png"></li>            
+           <li class="light-gray">   info.gt@payvalida.com</li>
+        </ul>
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    <br>
+    <!--Ahora agregamos informacion extra en dos filas mas-->
+    <div class="socket container">
+      <div class="row space-top-5 space-2">
+        <div class="col-12 text-center">
+          <p class="text-center light-gray">
+           Mantente en contacto a traves de:
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row space-top-5 space-5">
+       <p class="text-center light-gray">
+          © 2019 Payvalida | Términos de uso</a> | Política de privacidad</a>
+       </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
